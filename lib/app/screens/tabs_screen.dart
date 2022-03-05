@@ -31,12 +31,7 @@ class _Tabs extends StatelessWidget {
       // physics: const BouncingScrollPhysics(),
       controller: navigationProvider.pageController,
       physics: const NeverScrollableScrollPhysics(),
-      children: [
-        const TabTopHeadLines(),
-        Container(
-          color: Colors.blue,
-        ),
-      ],
+      children: const [TabTopHeadLines(), TabCategoryScreen()],
     );
   }
 }

@@ -21,24 +21,24 @@ class Article {
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: Source.fromJson(json["source"]),
-        author: json["author"] ?? null,
+        author: json["author"],
         title: json["title"],
-        description: json["description"] ?? null,
+        description: json["description"],
         url: json["url"],
-        urlToImage: json["urlToImage"] ?? null,
+        urlToImage: json["urlToImage"],
         publishedAt: DateTime.parse(json["publishedAt"]),
-        content: json["content"] ?? null,
+        content: json["content"],
       );
 
   Map<String, dynamic> toJson() => {
         "source": source.toJson(),
-        "author": author ?? null,
+        "author": author,
         "title": title,
-        "description": description ?? null,
+        "description": description,
         "url": url,
-        "urlToImage": urlToImage ?? null,
+        "urlToImage": urlToImage,
         "publishedAt": publishedAt.toIso8601String(),
-        "content": content ?? null,
+        "content": content,
       };
 }
 
@@ -52,12 +52,12 @@ class Source {
   String name;
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
-        id: json["id"] ?? null,
+        id: json["id"],
         name: json["name"],
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id ?? null,
+        "id": id,
         "name": name,
       };
 }
